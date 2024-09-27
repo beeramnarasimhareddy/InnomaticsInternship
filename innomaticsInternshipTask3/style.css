@@ -1,0 +1,120 @@
+.container {
+  display: grid;
+  grid-template-areas:
+      "head" 
+      "head2"
+      "header"
+      "content"
+      "signup"
+      "feature1"
+      "feature2"
+      "feature3";
+      justify-content: center;
+      
+}
+
+
+.head{
+  grid-area: head;
+  background-color: antiquewhite;
+  padding: 20px;
+  display: flex;
+  
+}
+.c1{
+  height: 15px;
+  width: 15px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-left: 200px;
+  margin-right: 20px;
+}
+
+.c2{
+  height: 15px;
+  width: 15px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.c3{
+  height: 15px;
+  width: 15px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.sub-head{
+grid-area: head2;
+background-color: lightblue;
+padding: 20px;
+align-items: center;
+}
+
+.header{
+  grid-area: header;
+  background-color: rgb(29, 169, 215);
+  padding: 35px;
+  text-align: center;
+}
+
+.content {
+  grid-area: content;
+  background-color: grey;
+  padding: 60px;
+  text-align: center;
+}
+
+#signup {
+  grid-area: signup;
+  background-color: rgb(26, 79, 24);
+  padding: 40px;
+  text-align: center;
+}
+
+#feature1 {
+  grid-area: feature1;
+  background-color:yellowgreen;
+  padding: 30px;
+  text-align: center;
+}
+
+#feature2 {
+  grid-area: feature2;
+  background-color: lightcoral;
+  padding: 30px;
+  text-align: center;
+}
+
+#feature3 {
+  grid-area: feature3;
+  background-color: rgb(231, 114, 231);
+  padding: 30px;
+  text-align: center;
+}
+
+/* Tablet view */
+@media (min-width: 500px) {
+  .container {
+      grid-template-areas:
+          "head head" 
+          "head2 head2"
+          "header header"
+          "content content"
+          "signup feature1"
+          "feature2 feature3";
+  }
+}
+
+/* Desktop view*/
+@media (min-width: 790px) {
+  .container {
+      grid-template-areas: 
+          "head head head"
+          "head2 head2 head2"
+          "header header header"
+          "feature1 feature2 feature3"
+          "signup signup signup"
+          "content content content";
+  }
+  
+}
